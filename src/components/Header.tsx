@@ -1,4 +1,5 @@
-import { Shield, Clock, ThumbsUp, LucideProps } from "lucide-react";
+import { Shield, Clock, ThumbsUp } from "lucide-react";
+import { IconType } from "../assets/types/IconType";
 
 export default function Header() {
 
@@ -17,44 +18,45 @@ export default function Header() {
 
     return (
         <header
+            id="header"
             className="flex flex-col
-            w-screen h-screen"
+            w-screen h-screen bg-zinc-50"
         >
             <div className="w-full h-auto px-5 mt-20  lg:mt-28 lg:ml-16 overflow-hidden"
             >
-                    <h1
-                        className="text-gray-900 font-extrabold text-4xl
+                <h1
+                    className="text-gray-900 font-extrabold text-4xl
                         sm:text-4xl md:text-5xl lg:text-6xl"
-                    >
-                        <span className="block">Soluções elétricas</span>
-                        <span className="block text-primary-500">profissionais e seguras</span>
-                    </h1>
-                    <p
-                        className="text-base text-gray-500
+                >
+                    <span className="block">Soluções elétricas</span>
+                    <span className="block text-primary-500">profissionais e seguras</span>
+                </h1>
+                <p
+                    className="text-base text-gray-500
                         sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0"
+                >
+                    Serviços elétricos residenciais e comerciais com qualidade e segurança.
+                    Atendimento 24 horas para emergências elétricas.
+                </p>
+                <div
+                    className="w-full mt-4 sm:mt-6 flex
+                    sm:justify-center lg:justify-start"
+                >
+                    <a
+                        className="rounded-md shadow-md
+                        border-transparent
+                        px-6 py-4
+                        text-1xl text-white bg-primary-500
+                        flex items-center justify-center
+                        hover:shadow-lg hover:bg-primary-600
+                        transition-all ease-in-out duration-300
+                        md:text-lg w-full lg:w-56"  // Removido sm:w-full e adicionado w-full
+                        target="_blank"
+                        href={url}
                     >
-                        Serviços elétricos residenciais e comerciais com qualidade e segurança.
-                        Atendimento 24 horas para emergências elétricas.
-                    </p>
-                    <div
-    className="w-full p-4 mt-4 sm:mt-6 flex
-    sm:justify-center lg:justify-start"
->
-    <a
-        className="rounded-md shadow-md
-        border-transparent
-        px-6 py-4
-        text-1xl text-white bg-primary-500
-        flex items-center justify-center
-        hover:shadow-lg hover:bg-primary-600
-        transition-all ease-in-out duration-300
-        md:text-lg w-full"  // Removido sm:w-full e adicionado w-full
-        target="_blank"
-        href={url}
-    >
-        Solicitar orçamento
-    </a>
-</div>
+                        Solicitar orçamento
+                    </a>
+                </div>
             </div>
             <div
                 className="grid grid-cols-1 h-auto mt-20 gap-4
@@ -68,8 +70,6 @@ export default function Header() {
         </header>
     )
 }
-
-type IconType = React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
 
 function Feature({ icon: Icon, title, description }: { icon: IconType; title: string; description: string; }) {
     return (
