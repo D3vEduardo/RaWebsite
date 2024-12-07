@@ -20,7 +20,7 @@ export default function Header() {
             className="flex flex-col
             w-screen h-screen"
         >
-            <div className="w-full h-auto p-2 mt-20 ml-5 lg:mt-28 lg:ml-16 overflow-hidden"
+            <div className="w-full h-auto px-5 mt-20  lg:mt-28 lg:ml-16 overflow-hidden"
             >
                     <h1
                         className="text-gray-900 font-extrabold text-4xl
@@ -36,20 +36,25 @@ export default function Header() {
                         Serviços elétricos residenciais e comerciais com qualidade e segurança.
                         Atendimento 24 horas para emergências elétricas.
                     </p>
-                <div
-                    className="w-48 lg:w-56 mt-4 sm:mt-6 flex sm:justify-center lg:justify-start"
-                >
-                        <a
-                            className="rounded-md shadow-md
-                            w-auto border-transparent
-                            px-6 py-4
-                            text-1xl text-white bg-primary-500
-                            flex items-center justify-center
-                            hover:shadow-lg hover:bg-primary-600 transition-all ease-in-out duration-300
-                            md:text-lg"
-                            target="_blank"
-                            href={url}>Solicitar orçamento</a>
-                </div>
+                    <div
+    className="w-full p-4 mt-4 sm:mt-6 flex
+    sm:justify-center lg:justify-start"
+>
+    <a
+        className="rounded-md shadow-md
+        border-transparent
+        px-6 py-4
+        text-1xl text-white bg-primary-500
+        flex items-center justify-center
+        hover:shadow-lg hover:bg-primary-600
+        transition-all ease-in-out duration-300
+        md:text-lg w-full"  // Removido sm:w-full e adicionado w-full
+        target="_blank"
+        href={url}
+    >
+        Solicitar orçamento
+    </a>
+</div>
             </div>
             <div
                 className="grid grid-cols-1 h-auto mt-20 gap-4
