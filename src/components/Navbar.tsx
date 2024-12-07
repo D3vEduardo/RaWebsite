@@ -1,6 +1,6 @@
 import logo from "../../public/images/logo.png";
 
-const NavLink = ({ text, element }: { text: string; element: HTMLElement; }) => {
+const NavLink = ({ text, element }: { text: string; element: Element; }) => {
     
     const handleClick = () => {
         element.scrollIntoView({ behavior: "smooth" })
@@ -14,8 +14,8 @@ const NavLink = ({ text, element }: { text: string; element: HTMLElement; }) => 
 
 export default function Navbar() {
 
-    const header = document.querySelector("#header") as HTMLElement;
-    const services = document.querySelector("#services") as HTMLElement;
+    const header = document.querySelector("#header");
+    const services = document.querySelector("#services");
 
     return (
         <nav className="fixed flex top-0 left-0
@@ -34,10 +34,10 @@ export default function Navbar() {
             </div>
             
             <ul className="flex items-center justify-center gap-x-4">
-                < NavLink element={header} text="Início" />
-                < NavLink element={services} text="Serviços" />
-                < NavLink element={header} text="Sobre" />
-                < NavLink element={services} text="Contato" />
+                < NavLink element={header!} text="Início" />
+                < NavLink element={services!} text="Serviços" />
+                < NavLink element={header!} text="Sobre" />
+                < NavLink element={services!} text="Contato" />
             </ul>
         </nav>
     )
