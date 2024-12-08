@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import logo from "../../public/images/logo.png";
 
 const NavLink = ({ text, element }: { text: string; element: Element; }) => {
@@ -14,8 +15,13 @@ const NavLink = ({ text, element }: { text: string; element: Element; }) => {
 
 export default function Navbar() {
 
-    const header = document.querySelector("#header");
-    const services = document.querySelector("#services");
+    const [header, setHeader] = useState<Element | null>();
+    const [services, setServices] = useState<Element | null>();
+
+    useEffect(() => {
+        setHeader(document.querySelector("#header"));
+        setServices(document.querySelector("#services"));
+    }, [])
 
     return (
         <nav className="fixed flex top-0 left-0
