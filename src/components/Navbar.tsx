@@ -17,10 +17,12 @@ export default function Navbar() {
 
     const [header, setHeader] = useState<Element | null>();
     const [services, setServices] = useState<Element | null>();
+    const [contact, setContact] = useState<Element | null>();
 
     useEffect(() => {
         setHeader(document.querySelector("#header"));
         setServices(document.querySelector("#services"));
+        setContact(document.querySelector("#contact"));
     }, [])
 
     return (
@@ -42,8 +44,7 @@ export default function Navbar() {
             <ul className="flex items-center justify-center gap-x-4">
                 < NavLink element={header!} text="Início" />
                 < NavLink element={services!} text="Serviços" />
-                < NavLink element={header!} text="Sobre" />
-                < NavLink element={services!} text="Contato" />
+                < NavLink element={contact!} text="Contato" />
             </ul>
         </nav>
     )

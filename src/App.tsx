@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
 
 export default function App() {
 
@@ -9,6 +10,7 @@ export default function App() {
       < Navbar />
       < Header />
       < Services />
+      < Contact />
     </>
   )
 }
