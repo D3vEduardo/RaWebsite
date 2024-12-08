@@ -1,7 +1,7 @@
 import { MapPin, MessageCircle, Phone } from "lucide-react";
 import { IconType } from "../assets/types/IconType";
 
-const phoneNumber = '+556499235-1422';
+//const phoneNumber = '+556499235-1422';
 
 export default function Contact() {
     return (
