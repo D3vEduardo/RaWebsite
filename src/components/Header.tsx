@@ -22,7 +22,7 @@ export default function Header() {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.to("#feature1", {
-            x: `${window.innerWidth < 640 ? "80%" : "0%"}`,
+            x: `${window.innerWidth < 640 ? "-80%" : "0%"}`,
             opacity: "0",
             ease: "power1.inOut",
             scrollTrigger: {
