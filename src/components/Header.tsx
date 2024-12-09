@@ -1,8 +1,5 @@
 import { Shield, Clock, ThumbsUp } from "lucide-react";
 import { IconType } from "../assets/types/IconType";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export default function Header() {
 
@@ -18,45 +15,6 @@ export default function Header() {
 
 
     const url = `https://api.whatsapp.com/send?phone=5564992351422&text=${message}%20Gostaria%20de%20fazer%20um%20orçamento!`
-
-    useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.to("#feature1", {
-            x: `${window.innerWidth < 640 ? "-80%" : "0%"}`,
-            opacity: "0",
-            ease: "power1.inOut",
-            scrollTrigger: {
-                start: "top 300px",
-                end: "top 50px",
-                trigger: "#feature1",
-                scrub: true
-            }
-        });
-
-        gsap.to("#feature3", {
-            x: `${window.innerWidth < 640 ? "80%" : "0%"}`,
-            opacity: "0",
-            ease: "power1.inOut",
-            scrollTrigger: {
-                start: "top 300px",
-                end: "top 50px",
-                trigger: "#feature3",
-                scrub: true
-            }
-        });
-
-        gsap.to("#feature2", {
-            x: `${window.innerWidth < 640 ? "80%" : "0%"}`,
-            opacity: "0",
-            ease: "power1.inOut",
-            scrollTrigger: {
-                start: "top 300px",
-                end: "top 50px",
-                trigger: "#feature2",
-                scrub: true
-            }
-        });
-    })
 
     return (
         <header
