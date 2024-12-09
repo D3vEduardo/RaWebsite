@@ -21,7 +21,44 @@ export default function Header() {
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to()
+        gsap.to("#feature1", {
+            x: `${window.innerWidth < 640 ? "80%" : "0%"}`,
+            opacity: "0",
+            ease: "power1.inOut",
+            scrollTrigger: {
+                start: "top 300px",
+                end: "top 50px",
+                trigger: "#feature1",
+                markers: true,
+                scrub: true
+            }
+        });
+
+        gsap.to("#feature3", {
+            x: `${window.innerWidth < 640 ? "80%" : "0%"}`,
+            opacity: "0",
+            ease: "power1.inOut",
+            scrollTrigger: {
+                start: "top 300px",
+                end: "top 50px",
+                trigger: "#feature3",
+                markers: true,
+                scrub: true
+            }
+        });
+
+        gsap.to("#feature2", {
+            x: `${window.innerWidth < 640 ? "80%" : "0%"}`,
+            opacity: "0",
+            ease: "power1.inOut",
+            scrollTrigger: {
+                start: "top 300px",
+                end: "top 50px",
+                trigger: "#feature2",
+                markers: true,
+                scrub: true
+            }
+        });
     })
 
     return (
@@ -70,6 +107,7 @@ export default function Header() {
                 className="grid grid-cols-1 h-auto mt-20 gap-4
                 sm:mt-20 md:mt-24 lg:mt-24
                 sm:grid-cols-3"
+                id="features"
             >
                 < Feature id="feature1" icon={Shield} title="Segurança Garantida" description="Profissional certificado e materiais de qualidade" />
                 < Feature id="feature2" icon={Clock} title="Atendimento 24h" description="Disponível para emergências elétricas" />
