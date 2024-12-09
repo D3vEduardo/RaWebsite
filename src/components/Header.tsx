@@ -29,7 +29,6 @@ export default function Header() {
                 start: "top 300px",
                 end: "top 50px",
                 trigger: "#feature1",
-                markers: true,
                 scrub: true
             }
         });
@@ -42,7 +41,6 @@ export default function Header() {
                 start: "top 300px",
                 end: "top 50px",
                 trigger: "#feature3",
-                markers: true,
                 scrub: true
             }
         });
@@ -55,7 +53,6 @@ export default function Header() {
                 start: "top 300px",
                 end: "top 50px",
                 trigger: "#feature2",
-                markers: true,
                 scrub: true
             }
         });
