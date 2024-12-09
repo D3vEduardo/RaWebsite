@@ -1,5 +1,8 @@
 import { Shield, Clock, ThumbsUp } from "lucide-react";
 import { IconType } from "../assets/types/IconType";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export default function Header() {
 
@@ -15,6 +18,11 @@ export default function Header() {
 
 
     const url = `https://api.whatsapp.com/send?phone=5564992351422&text=${message}%20Gostaria%20de%20fazer%20um%20orçamento!`
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to()
+    })
 
     return (
         <header
@@ -63,17 +71,17 @@ export default function Header() {
                 sm:mt-20 md:mt-24 lg:mt-24
                 sm:grid-cols-3"
             >
-                < Feature icon={Shield} title="Segurança Garantida" description="Profissional certificado e materiais de qualidade" />
-                < Feature icon={Clock} title="Atendimento 24h" description="Disponível para emergências elétricas" />
-                < Feature icon={ThumbsUp} title="Satisfação Total" description="Compromisso com a qualidade do serviço" />
+                < Feature id="feature1" icon={Shield} title="Segurança Garantida" description="Profissional certificado e materiais de qualidade" />
+                < Feature id="feature2" icon={Clock} title="Atendimento 24h" description="Disponível para emergências elétricas" />
+                < Feature id="feature3" icon={ThumbsUp} title="Satisfação Total" description="Compromisso com a qualidade do serviço" />
             </div>
         </header>
     )
 }
 
-function Feature({ icon: Icon, title, description }: { icon: IconType; title: string; description: string; }) {
+function Feature({ icon: Icon, title, description, id }: { icon: IconType; title: string; description: string; id: string; }) {
     return (
-        <figure className="flex flex-col items-center text-center cursor-pointer">
+        <figure id={id} className="flex flex-col items-center text-center cursor-pointer">
             <div
                 className="bg-primary-200 w-12 h-12 rounded-md
                 flex justify-center items-center"

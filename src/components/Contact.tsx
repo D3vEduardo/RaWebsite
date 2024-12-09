@@ -1,7 +1,7 @@
 import { MapPin, MessageCircle, Phone } from "lucide-react";
 import { IconType } from "../assets/types/IconType";
 
-const phoneNumber = '+556499235-1422';
+//const phoneNumber = '+556499235-1422';
 
 export default function Contact() {
     return (
@@ -21,18 +21,21 @@ export default function Contact() {
                 className="flex flex-col lg:flex-row gap-8 items-center justify-center"
             >
                 <Card
+                    onClick={() => window.open("tel:+5564992351422")}
                     name="Telefone"
                     description="(64) 99235-1422"
                     expectedTime="Disponível 24/7 para emergências"
                     icon={Phone}
                 />
                 <Card
+                    onClick={() => window.open("https://wa.me/+5564992351422")}
                     name="WhatsApp"
                     description="(64) 99235-1422"
                     expectedTime="Resposta em até 24 horas"
                     icon={MessageCircle}
                 />
                 <Card
+                    onClick={() => window.open("https://maps.app.goo.gl/eMypBHzysJ5kN3Hw7")}
                     name="Endereço"
                     description="Av. Brasil - Rio Verde, Goiás"
                     expectedTime="Atendemos toda região"
@@ -48,11 +51,13 @@ type CardProps = {
     description: string;
     expectedTime: string;
     icon: IconType;
+    onClick: () => void;
 }
 
-function Card({ name, description, expectedTime, icon: Icon }: CardProps) {
+function Card({ name, description, expectedTime, icon: Icon, onClick }: CardProps) {
     return (
         <figure
+            onClick={onClick}
             className="flex items-center justify-start w-full
             bg-white px-4 py-4 gap-x-4 rounded-lg shadow-md
             lg:w-auto

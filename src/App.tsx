@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
       < Header />
       < Services />
       < Contact />
+      < Footer />
     </>
   )
 }
