@@ -39,7 +39,7 @@ export default function Services() {
                 <h1
                     className="text-3xl text-zinc-900 font-extrabold
                     sm:text-4xl"
-                >Nossos Seriços</h1>
+                >Nossos Serviços</h1>
                 <p
                     className="text-zinc-500 text-xl max-w-2xl"
                 >Oferecemos uma ampla gama de serviços elétricos para sua residência ou empresa.</p>
