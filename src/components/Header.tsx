@@ -20,7 +20,7 @@ export default function Header() {
         <header
             id="header"
             className="flex flex-col
-            w-screen h-screen bg-zinc-50"
+            w-screen min-h-screen bg-zinc-50"
         >
             <div className="w-full h-auto px-5 mt-20  lg:mt-28 lg:ml-16 overflow-hidden"
             >
