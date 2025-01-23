@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      rotate: {
+        '360': '720deg', // Adiciona um valor de 360 graus
+      },
       colors: {
         primary: {
           50: '#fff7ed',
