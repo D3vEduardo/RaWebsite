@@ -34,7 +34,7 @@ const Card = ({ name, description, icon: Icon }: CardProps) => {
 
 export default function Services() {
     return (
-        <div id="services" className="w-screen h-screen flex flex-col justify-center items-center bg-zinc-50">
+        <div id="services" className="w-screen min-h-screen flex flex-col justify-center items-center bg-zinc-50">
             <section className="text-center">
                 <h1
                     className="text-3xl text-zinc-900 font-extrabold
@@ -44,7 +44,7 @@ export default function Services() {
                     className="text-zinc-500 text-xl max-w-2xl"
                 >Oferecemos uma ampla gama de serviços elétricos para sua residência ou empresa.</p>
             </section>
-            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-8">
+            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-8 items-center place-items-center">
                 <Card name="Instalações Residenciais" description="Instalação e manutenção elétrica completa para sua casa" icon={House} />
                 <Card name="Instalações Comerciais" description="Soluções elétricas profissionais para seu negócio" icon={Building2} />
                 <Card name="Quadros Elétricos" description="Montagem e manutenção de quadros de distribuição" icon={Power} />
