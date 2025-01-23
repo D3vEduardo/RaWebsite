@@ -29,7 +29,7 @@ export default function Navbar() {
         <nav className="fixed flex top-0 left-0
             w-screen h-16 md:h-auto lg:h-auto
             justify-between items-center px-6 py-2
-            rounded-b-3xl shadow-md bg-white"
+            rounded-b-3xl shadow-md bg-white z-50"
         >
             <div className="flex items-center">
                 <img

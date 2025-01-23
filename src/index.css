@@ -11,3 +11,16 @@
 body, html {
   overflow-x: hidden;
 }
+
+.ocultar {
+  opacity: 0;
+  transform: translateY(50px);
+  filter: blur(5px);
+  transition: all 1s ease-in-out;
+}
+
+.mostrar {
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0px);
+}

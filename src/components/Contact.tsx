@@ -11,10 +11,10 @@ export default function Contact() {
         >
             <section className="text-center gap-2">
                 <h1
-                    className="text-3xl font-extrabold text-zinc-800"
+                    className="text-3xl font-extrabold text-zinc-800 ocultar"
                 >Entre em Contato</h1>
                 <h2
-                    className="text-xl text-zinc-500"
+                    className="text-xl text-zinc-500 ocultar"
                 >Estamos prontos para atender as suas necessidades</h2>
             </section>
             <section
@@ -58,11 +58,11 @@ function Card({ name, description, expectedTime, icon: Icon, onClick }: CardProp
     return (
         <figure
             onClick={onClick}
-            className="flex items-center justify-start w-full
+            className={`flex items-center justify-start w-full
             bg-white px-4 py-4 gap-x-4 rounded-lg shadow-md
             lg:w-auto
             hover:cursor-pointer hover:-translate-y-1 hover:shadow-lg
-            duration-500 ease-in-out"
+            ocultar`}
         >
             <div className="w-12 h-12 bg-primary-200
                 flex items-center justify-center rounded-md">

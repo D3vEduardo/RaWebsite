@@ -1,5 +1,6 @@
 import { Shield, Clock, ThumbsUp } from "lucide-react";
 import { IconType } from "../assets/types/IconType";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Header() {
 
@@ -26,14 +27,23 @@ export default function Header() {
             >
                 <h1
                     className="text-gray-900 font-extrabold text-4xl
-                        sm:text-4xl md:text-5xl lg:text-6xl"
+                        sm:text-4xl md:text-5xl lg:text-6xl ocultar"
                 >
                     <span className="block">Soluções elétricas</span>
-                    <span className="block text-primary-500">profissionais e seguras</span>
+                    <TypeAnimation
+                        sequence={[ "profissionais,", 2000,
+                        "seguras,", 2000,
+                        "de qualidade,", 2000
+                     ]}
+                        cursor={true}
+                        repeat={Infinity}
+                        wrapper="span"
+                        className="block text-primary-500"
+                    />
                 </h1>
                 <p
                     className="text-base text-gray-500
-                        sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0"
+                        sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0 ocultar"
                 >
                     Serviços elétricos residenciais e comerciais com qualidade e segurança.
                     Atendimento 24 horas para emergências elétricas.
@@ -50,7 +60,7 @@ export default function Header() {
                         flex items-center justify-center
                         hover:shadow-lg hover:bg-primary-600
                         transition-all ease-in-out duration-300
-                        md:text-lg w-full lg:w-56"  // Removido sm:w-full e adicionado w-full
+                        md:text-lg w-full lg:w-56 ocultar"
                         target="_blank"
                         href={url}
                     >
@@ -73,8 +83,9 @@ export default function Header() {
 }
 
 function Feature({ icon: Icon, title, description, id }: { icon: IconType; title: string; description: string; id: string; }) {
+
     return (
-        <figure id={id} className="flex flex-col items-center text-center cursor-pointer">
+        <figure id={id} className="flex flex-col items-center text-center cursor-pointer ocultar">
             <div
                 className="bg-primary-200 w-12 h-12 rounded-md
                 flex justify-center items-center"

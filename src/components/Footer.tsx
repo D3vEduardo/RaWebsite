@@ -9,7 +9,7 @@ const LinkFooter = ({ text, element }: { text: string; element: Element; }) => {
     
     return <span className="font-bold text-gray-500 
     hover:text-primary-500 hover:cursor-pointer
-    transition-all ease-in-out duration-300"
+    transition-all ease-in-out duration-300 ocultar"
     onClick={handleClick}>{text}</span>
 }
 
@@ -30,7 +30,7 @@ export default function Footer() {
         bg-gray-900 py-8 gap-8"
         >
             <div className="flex justify-center items-center text-center gap-2
-            hover:cursor-pointer"
+            hover:cursor-pointer ocultar"
             onClick={() => window.open("https://wa.me/+5564992351422")}
             >
                 <img src={logo} alt="RA Instalações Elétricas - LOGO"
