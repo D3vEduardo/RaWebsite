@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <div id="contact"
         className="flex flex-col justify-center items-center
-        w-screen h-screen bg-zinc-50 gap-10"
+        w-screen min-h-screen bg-zinc-50 gap-10"
         >
             <section className="text-center gap-2">
                 <h1
