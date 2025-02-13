@@ -1,20 +1,27 @@
-import Header from "./components/Header";
-import Services from "./components/Services";
+import Header from "./pages/Header";
+import Services from "./pages/Services";
 import Navbar from "./components/Navbar";
-import Contact from "./components/Contact";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import { ScrollAnimation } from "./components/ScrollAnimation";
+import { useEffect } from "react";
+import AOS from "aos";
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  }, []);
 
   return (
     <>
-      < Navbar />
-      < Header />
-      < Services />
-      < Contact />
-      < Footer />
-      <ScrollAnimation />
+      <Navbar />
+      <Header />
+      <Services />
+      <Contact />
+      <Footer />
     </>
   )
 }
