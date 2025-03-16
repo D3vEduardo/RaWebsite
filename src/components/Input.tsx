@@ -19,7 +19,7 @@ export default function Input({ className, id, label, setInputValue, ...props }:
         onChange={e => setInputValue && setInputValue(e.target.value)}
         className={twMerge(
           `w-full bg-gray-100 text-gray-800 px-4 py-3 rounded-lg focus:outline-none
-                    focus:ring-2 focus:ring-primary-500 shadow-sm`,
+                    focus:ring-2 focus:ring-zinc-400 shadow-sm`,
           className
         )}
         {...props}

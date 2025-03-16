@@ -24,7 +24,7 @@ export default function TextArea({ register, className, id, label, ...props }: I
                 {...register("content")}
                 className={twMerge(
                     `w-full bg-gray-100 text-gray-800 px-4 py-3 rounded-lg focus:outline-none
-                    focus:ring-2 focus:ring-primary-500 shadow-sm resize-none`,
+                    focus:ring-2 focus:ring-zinc-400 shadow-sm resize-none`,
                     className
                 )}
                 maxLength={300}
