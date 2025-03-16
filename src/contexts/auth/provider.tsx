@@ -22,7 +22,6 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
     async function login() {
         const res = await signInWithPopup(auth, googleProvider);
         setUser(res.user);
-        console.log(res.user);
     }
 
     async function logout() {
