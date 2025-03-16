@@ -7,8 +7,8 @@ export default function BackToHome() {
         <span
             onClick={() => navigate("/")}
             className="bg-primary-500 text-white
-            p-3 rounded-xl absolute left-95/100 bottom-7 cursor-pointer overflow-hidden
-            hover:bg-primary-600 hover:w-[160px] hover:left-[87.5%] group gap-1
+            p-3 rounded-xl absolute left-[80vw] sm:left-[90vw] bottom-7 cursor-pointer overflow-hidden
+            hover:bg-primary-600 hover:w-[160px] hover:left-[87.5vw] group gap-1
             flex items-center justify-center w-[50px] h-[50px]
             transition-all duration-500 ease-in-out"
         >

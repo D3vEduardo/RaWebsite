@@ -8,7 +8,7 @@ import EvaluationStar from "./EvaluationStar.tsx";
 type Props = ComponentProps<"figure"> & {
     evaluation: Evaluation;
     type?: "public" | "profile";
-    setModalOnScreen: Dispatch<SetStateAction<"edit" | "delete" | "none">>;
+    setModalOnScreen?: Dispatch<SetStateAction<"edit" | "delete" | "none">>;
 }
 
 export default function EvaluationCard({ evaluation, className, type, setModalOnScreen, ...props }: Props) {
@@ -31,11 +31,11 @@ export default function EvaluationCard({ evaluation, className, type, setModalOn
                         className="flex items-center justify-center gap-1"
                     >
                         <Trash
-                            onClick={() => setModalOnScreen("delete")}
+                            onClick={() => setModalOnScreen && setModalOnScreen("delete")}
                             className="w-5 text-primary-700 cursor-pointer"
                         />
                         <Pencil
-                            onClick={() => setModalOnScreen("edit")}
+                            onClick={() => setModalOnScreen && setModalOnScreen("edit")}
                             className="w-5 text-primary-700 cursor-pointer"
                         />
                     </aside>
@@ -55,7 +55,7 @@ export default function EvaluationCard({ evaluation, className, type, setModalOn
             data-aos="fade-up"
             className={twMerge(
                 `flex flex-col items-center gap-2 bg-gray-100 px-6 py-4 rounded-lg
-            shadow-lg`,
+            shadow-lg w-[90vw] sm:w-[450px]`,
                 className
             )}
         >
@@ -68,12 +68,13 @@ export default function EvaluationCard({ evaluation, className, type, setModalOn
                 >
                     <UserProfilePhoto
                         photoURL={evaluation.author.photoURL}
-                        className="w-18 rounded-xl"
+                        className="h-18 rounded-xl"
                         displayName={evaluation.author.displayName}
                     />
-                    <div className="flex flex-col items-start">
+                    <div className="flex flex-col items-start justify-center">
                         <p
-                            className="text-gray-700 font-bold text-2xl"
+                            className="text-gray-700 font-bold text-2xl
+                            max-w-[17ch] truncate"
                         >
                             {evaluation.author.displayName || "User"}
                         </p>

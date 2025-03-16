@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import logo from "../../../RaWebsite/public/images/logo.png";
+import logo from "../../public/images/logo.png";
 
-const LinkFooter = ({ text, element, delay=0 }: { text: string; element: Element; delay?: number; }) => {
+const LinkFooter = ({ text, element, delay = 0 }: { text: string; element: Element; delay?: number; }) => {
 
     const handleClick = () => {
         element.scrollIntoView({ behavior: "smooth" })
@@ -14,10 +14,10 @@ const LinkFooter = ({ text, element, delay=0 }: { text: string; element: Element
             data-aos="fade-up"
             data-aos-delay={delay}
             onClick={handleClick}>
-                <h1 className="group-hover:text-orange-500 transition-all duration-300">
-                    {text}
-                </h1>
-            
+            <h1 className="group-hover:text-orange-500 transition-all duration-300">
+                {text}
+            </h1>
+
             <span
                 className="absolute left-1/2 -bottom-1
                 bg-orange-500 w-0 h-1 rounded-xl
@@ -53,16 +53,16 @@ export default function Footer() {
                     data-aos-delay={300}
                 />
                 <h1
-                data-aos="fade-up"
-                data-aos-delay={400}
-                className="text-white font-bold text-2xl text-center"
+                    data-aos="fade-up"
+                    data-aos-delay={400}
+                    className="text-white font-bold text-2xl text-center"
                 >RA Instalações Elétricas</h1>
             </div>
             <section className="flex justify-center items-center gap-4"
             >
-                < LinkFooter element={header!} text="Início" delay={600}/>
-                < LinkFooter element={services!} text="Serviços" delay={800}/>
-                < LinkFooter element={contact!} text="Contato" delay={1000}/>
+                < LinkFooter element={header!} text="Início" delay={600} />
+                < LinkFooter element={services!} text="Serviços" delay={800} />
+                < LinkFooter element={contact!} text="Contato" delay={1000} />
             </section>
             <h3 className="text-gray-500 text-sm">© 2025 RA Instalações Elétricas. Todos os direitos reservados.</h3>
         </footer>

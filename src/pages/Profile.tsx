@@ -41,7 +41,8 @@ export default function Profile() {
 
     return (
         <div
-            className="flex flex-col justify-center items-center w-screen h-dvh bg-zinc-50"
+            className="flex flex-col justify-center items-center w-screen h-dvh bg-zinc-50
+            overflow-hidden"
         >
             <figure
                 className="max-w-90/100 max-h-90/100 bg-zinc-200 p-4 rounded-lg flex flex-col gap-4 shadow-lg"

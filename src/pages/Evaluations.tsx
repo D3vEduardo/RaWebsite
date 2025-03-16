@@ -29,7 +29,9 @@ export default function Evaluations() {
                     Veja o que nossos clientes dizem sobre nosso serviço prestado.
                 </h3>
             </div>
-            <section>
+            <section
+                className="flex flex-col items-center justify-center gap-12"
+            >
                 {evaluationsQuery.data.data.evaluations.map(evaluation => {
                     const author = evaluationsQuery.data.data?.authors?.find(
                         author => author.uid === evaluation.authorId

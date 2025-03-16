@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../../../RaWebsite/public/images/logo.png";
+import logo from "../../public/images/logo.png";
 import { LogIn } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button.tsx";
@@ -88,9 +88,9 @@ export default function Navbar() {
             }}
           >
             <UserProfilePhoto
-            displayName={user.displayName || "User"}
-            photoURL={user.photoURL as string | undefined}
-            className="w-8 rounded-full z-10"
+              displayName={user.displayName || "User"}
+              photoURL={user.photoURL as string | undefined}
+              className="w-8 rounded-full z-10"
             />
             <p className="font-semibold flex items-center justify-center gap-x-2 z-10">
               Meu perfil

@@ -4,6 +4,7 @@ import { useAuth } from "../contexts/auth/hook";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BackToHome from "../components/BackToHome.tsx";
+import logo from "../../public/images/logo.png";
 
 export default function Login() {
     const { login, user } = useAuth();
@@ -25,7 +26,7 @@ export default function Login() {
                 className="flex flex-col items-center justify-center gap-3 h-dvh w-[290px]"
             >
                 <div className="text-center flex flex-col items-center justify-center">
-                    <img src="/public/images/logo.png" alt="RA Instalações Elétricas - Logo"
+                    <img src={logo} alt="RA Instalações Elétricas - Logo"
                         className="w-15 mb-3"
                         data-aos="fade-up"
                     />

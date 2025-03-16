@@ -41,7 +41,7 @@ export default function DeleteEvaluationModal({ setModalOnScreen }: PropsType) {
         <figure
             className="flex flex-col items-center justify-center gap-4 px-6 py-5
             absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-            bg-zinc-200 max-w-[300px] text-center rounded-2xl shadow-lg
+            bg-zinc-200 w-[90vw] sm:w-[50vw] max-w-[300px] text-center rounded-2xl shadow-lg
             border border-gray-300"
         >
             <header>
