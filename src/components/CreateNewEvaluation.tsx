@@ -53,7 +53,7 @@ export default function CreateNewEvaluation() {
 
     return (
         <main
-            className="flex flex-col items-center justify-center w-[90vw] md:max-w-[400px] gap-4"
+            className="flex flex-col items-center justify-center w-full md:max-w-[400px] gap-4"
         >
             <div
                 className="flex flex-col items-center justify-center text-center"
