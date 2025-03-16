@@ -5,6 +5,10 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 import AOS from "aos";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Evaluations from "./pages/Evaluations.tsx";
 
 export default function App() {
   useEffect(() => {
@@ -16,12 +20,21 @@ export default function App() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <Header />
-      <Services />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+          (<>
+            <Navbar />
+            <Header />
+            <Services />
+            <Evaluations />
+            <Contact />
+            <Footer />
+          </>)
+        } />
+        <Route path="/perfil" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   )
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../public/images/logo.png";
+import logo from "../../../RaWebsite/public/images/logo.png";
 
 const LinkFooter = ({ text, element, delay=0 }: { text: string; element: Element; delay?: number; }) => {
 
