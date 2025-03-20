@@ -18,11 +18,11 @@ export interface paths {
         get: {
             parameters: {
                 query?: {
-                    accessToken?: string;
                     page?: string;
                     pageSize?: string;
                     minValue?: string;
                     maxValue?: string;
+                    randomized?: string;
                 };
                 header?: never;
                 path?: never;

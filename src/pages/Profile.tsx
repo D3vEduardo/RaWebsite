@@ -15,6 +15,22 @@ export default function Profile() {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 
+    const userEvaluationQuery = useQuery({
+        queryKey: ["evaluation", user?.uid],
+        queryFn: async () => {
+            if (!user) return;
+            const accessToken = await user.getIdToken();
+            const res =
+                await api.GET("/evaluation/", {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            });
+
+            return res;
+        }
+    });
+
     useEffect(() => {
         if (!user) {
             navigate("/login");
@@ -22,22 +38,6 @@ export default function Profile() {
     }, [navigate, user]);
 
     if (!user) return null;
-
-    const userEvaluationQuery = useQuery({
-        queryKey: ["evaluation", user.uid],
-        queryFn: async () => {
-            const accessToken = await user.getIdToken();
-            const res = await api.GET("/evaluation/", {
-                params: {
-                    query: {
-                        accessToken
-                    }
-                }
-            });
-
-            return res;
-        }
-    });
 
     return (
         <div
@@ -57,7 +57,8 @@ export default function Profile() {
                         className="flex flex-col justify-start items-start text-start"
                     >
                         <p
-                            className="font-bold text-lg text-zinc-700"
+                            className="font-bold text-lg text-zinc-700
+                            max-w-[17ch] truncate"
                         >
                             {user.displayName}
                         </p>

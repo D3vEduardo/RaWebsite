@@ -30,7 +30,8 @@ export default function Evaluations() {
                 </h3>
             </div>
             <section
-                className="flex flex-col items-center justify-center gap-12"
+                className="grid grid-cols-1 lg:grid-cols-2
+                content-center gap-12"
             >
                 {evaluationsQuery.data.data.evaluations.map(evaluation => {
                     const author = evaluationsQuery.data.data?.authors?.find(
@@ -65,7 +66,8 @@ async function getEvaluations() {
             query: {
                 maxValue: "5",
                 minValue: "4",
-                pageSize: "2"
+                pageSize: "3",
+                randomized: "yes"
             }
         }
     });
