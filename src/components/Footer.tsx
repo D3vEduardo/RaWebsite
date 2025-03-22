@@ -4,7 +4,6 @@ import logo from "../../public/images/logo.png";
 const LinkFooter = ({
   text,
   element,
-  delay = 0,
 }: {
   text: string;
   element: Element;
@@ -19,9 +18,6 @@ const LinkFooter = ({
       className="font-bold text-gray-500 relative
             transition-all duration-0 group
             hover:cursor-pointer"
-      data-aos-anchor="#footer-anchor"
-      data-aos="fade-up"
-      data-aos-delay={delay}
       onClick={handleClick}
     >
       <h1 className="group-hover:text-orange-500 transition-all duration-300">
@@ -63,14 +59,8 @@ export default function Footer() {
           src={logo}
           alt="RA Instalações Elétricas - LOGO"
           className="w-12"
-          data-aos="fade-up"
-          data-aos-delay={300}
         />
-        <h1
-          data-aos="fade-up"
-          data-aos-delay={400}
-          className="text-white font-bold text-2xl text-center"
-        >
+        <h1 className="text-white font-bold text-2xl text-center">
           RA Instalações Elétricas
         </h1>
       </div>
