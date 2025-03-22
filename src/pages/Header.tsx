@@ -59,20 +59,17 @@ export default function Header() {
             Atendimento 24 horas para emergências elétricas.
           </span>
         </p>
-        <div
-          className="w-full mt-4 sm:mt-6 flex sm:justify-start"
-        >
+        <div className="w-full mt-4 sm:mt-6 flex sm:justify-start">
           <Button
             className="font-semibold"
-            animationDelay={500}
+            handleClickDelay={800}
             animationType="fade-right"
             handleClick={() => window.open(url)}
             size="lg"
           >
-            <p
-              className="z-10 flex text-center items-center justify-center"
-            >
-              <MessageSquareShare className="w-6 h-6 mr-2" /> Solicitar orçamento
+            <p className="z-10 flex text-center items-center justify-center">
+              <MessageSquareShare className="w-6 h-6 mr-2" /> Solicitar
+              orçamento
             </p>
           </Button>
         </div>

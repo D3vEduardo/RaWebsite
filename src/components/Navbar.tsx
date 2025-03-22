@@ -13,7 +13,7 @@ const NavLink = ({ text, element }: { text: string; element: Element }) => {
 
   return (
     <li
-      className="relative font-bold text-gray-800 
+      className="relative font-bold text-gray-800
     hover:text-primary-600 hover:cursor-pointer
     transition-all ease-in-out duration-300 group"
       onClick={handleClick}
@@ -54,9 +54,7 @@ export default function Navbar() {
           alt="RA Instalações Elétricas - Logo"
           className="w-10 md:w-10 lg:w-12 hover:rotate-360 transition-all duration-1000"
         />
-        <h1
-          className="text-gray-900 font-bold text-xl ml-3"
-        >
+        <h1 className="text-gray-900 font-bold text-xl ml-3">
           RA Instalações Elétricas
         </h1>
       </div>
@@ -68,6 +66,7 @@ export default function Navbar() {
         {!user?.email ? (
           <Button
             size="sm"
+            handleClickDelay={800}
             handleClick={() => {
               if (user) return;
               navigate("/login");
@@ -82,6 +81,7 @@ export default function Navbar() {
           <Button
             size="sm"
             className="gap-x-2"
+            handleClickDelay={800}
             handleClick={() => {
               if (!user) return;
               navigate("/perfil");
