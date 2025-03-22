@@ -62,7 +62,7 @@ export default function EvaluationCard({
       data-aos-delay={aosDelay}
       className={twMerge(
         `flex flex-col items-center gap-2 bg-gray-100 px-6 py-4 rounded-lg
-            shadow-lg w-[90vw] sm:w-[450px]`,
+            shadow-lg w-auto max-w-[90vw] sm:max-w-[450px]`,
         className,
       )}
     >

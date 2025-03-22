@@ -14,8 +14,8 @@ export default function Evaluations() {
 
   return (
     <div
-      className="w-screen h-dvh flex flex-col items-center justify-center
-            bg-zinc-50 gap-10"
+      className="w-screen min-h-dvh flex flex-col items-center justify-center
+            bg-zinc-50 gap-10 py-14 mt-10"
     >
       <div className="flex flex-col items-center justify-center text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
