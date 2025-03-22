@@ -9,6 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "../assets/libs/openapi/api.ts";
 import DeleteEvaluationModal from "../components/DeleteEvaluationModal.tsx";
 import EditEvaluationModal from "../components/EditEvaluationModal.tsx";
+import { LoaderCircle } from "lucide-react";
 
 export default function Profile() {
   const [modalOnScreen, setModalOnScreen] = useState<
@@ -67,26 +68,36 @@ export default function Profile() {
           </div>
         </div>
         <div className="flex flex-col justify-start items-start px-2">
-          {userEvaluationQuery.data?.data?.evaluation ? (
-            <>
-              <h1 className="font-bold text-xl text-zinc-700">
-                Sua avaliação:
-              </h1>
-              <EvaluationCard
-                setModalOnScreen={setModalOnScreen}
-                type="profile"
-                evaluation={{
-                  ...userEvaluationQuery.data.data.evaluation,
-                  author: {
-                    uid: user.uid,
-                    displayName: user.displayName,
-                    photoURL: user.photoURL,
-                  },
-                }}
-              />
-            </>
-          ) : (
+          {!userEvaluationQuery.data?.data?.evaluation &&
+          !userEvaluationQuery.isLoading ? (
             <CreateNewEvaluation />
+          ) : userEvaluationQuery.isLoading ? (
+            <div className="flex w-full items-center justify-center">
+              <LoaderCircle
+                size={30}
+                className="animate-spin ease-in-out text-primary-500"
+              />
+            </div>
+          ) : (
+            userEvaluationQuery?.data?.data?.evaluation && (
+              <>
+                <h1 className="font-bold text-xl text-zinc-700">
+                  Sua avaliação:
+                </h1>
+                <EvaluationCard
+                  setModalOnScreen={setModalOnScreen}
+                  type="profile"
+                  evaluation={{
+                    ...userEvaluationQuery.data.data.evaluation,
+                    author: {
+                      uid: user.uid,
+                      displayName: user.displayName,
+                      photoURL: user.photoURL,
+                    },
+                  }}
+                />
+              </>
+            )
           )}
         </div>
       </figure>
