@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rainstalacoeseletricas.vercel.app/sitemap.xml
