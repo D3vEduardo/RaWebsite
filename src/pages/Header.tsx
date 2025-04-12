@@ -56,7 +56,7 @@ export default function Header() {
             segurança.{" "}
           </span>
           <span data-aos="fade-right" data-aos-delay={500}>
-            Atendimento 24 horas para emergências elétricas.
+            Atendimento 24 horas para emergências elétricas. Atendemos toda região de Rio Verde, Goiás.
           </span>
         </p>
         <div className="w-full mt-4 sm:mt-6 flex sm:justify-start">
