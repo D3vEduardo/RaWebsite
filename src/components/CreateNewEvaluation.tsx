@@ -41,7 +41,7 @@ export default function CreateNewEvaluation() {
         },
         onSuccess: () => {
             if (user) {
-                queryClient.invalidateQueries({ queryKey: ["evaluation", user.uid] });
+                queryClient.invalidateQueries({ queryKey: ["evaluations", user.uid] });
                 setShowForm(false);
             }
         }
