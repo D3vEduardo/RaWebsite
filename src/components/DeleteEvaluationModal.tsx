@@ -32,7 +32,7 @@ export default function DeleteEvaluationModal({ setModalOnScreen }: PropsType) {
     },
     onSuccess: () => {
       if (user) {
-        queryClient.invalidateQueries({ queryKey: ["evaluation", user.uid] });
+        queryClient.invalidateQueries({ queryKey: ["evaluations", user.uid] });
       }
     },
   });
